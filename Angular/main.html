@@ -8,31 +8,23 @@
 	<script src="modules/app.js"></script>
 	<script src="modules/controllers/pokemonsController.js"></script>
 	<script src="modules/routes/route.js"></script>
+	<script src="modules/services/service.js"></script>
 </head>
 <body>
 
-	<div class="wrapper" ng-app="pokemonsApp" ng-controller="allPokemons">
+	<div class="wrapper" ng-app="pokemonsApp">
 
 
 		<div id="nav" class="navbar navbar-default">
-			<a href="#/route3">HOME</a><br/>
-			<a href="#/route1">Route 1</a><br/>
-			<a href="#/route2">Route 2</a><br/>
+			<a href="#/home">HOME</a><br/>
+			<a href="#/pokemons">Pokemons</a><br/>
+			<a href="#/addPokemon">Add new Pokemon</a><br/>
 		</div>
 
 		<div id="body">
 			<div class="media">
 				<div class="media-body">
-
-						<ul>
-							<li ng-repeat="r in pokemons">
-								{{ r.name + " " + r.type}}
-							</li>
-						</ul>
-
 						<div ng-view></div>
-
-
 				</div>
 			</div>
 		</div>

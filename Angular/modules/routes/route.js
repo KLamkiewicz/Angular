@@ -3,15 +3,19 @@ var route = angular.module("pokemonsRoute", ['ngRoute']);
 route.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
-            when('/route1', {
-                templateUrl: 'home.html',
-                controller: 'RouteController'
+            when('/pokemons', {
+                templateUrl: 'pokemons.html',
+                controller: 'allPokemons'
             }).
-            when('/route2', {
-                templateUrl: 'angular-route-template-2.jsp',
-                controller: 'RouteController'
+            when('/addPokemon', {
+                templateUrl: 'pokemonForm.html',
+                controller: 'addPokemon'
+            }).
+            when('/home', {
+                templateUrl: 'welcome.html'
             }).
             otherwise({
+                templateUrl: 'welcome.html',
                 redirectTo: '/'
             });
     }]);
