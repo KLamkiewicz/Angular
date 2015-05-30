@@ -1,0 +1,44 @@
+<html >
+<head>
+	<title>Angular project home page</title>
+	<meta charset="utf-8" /> 
+	<link rel="stylesheet" href="bower_components\bootstrap\dist\css\bootstrap.css">
+	<script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="modules/app.js"></script>
+	<script src="modules/controllers/pokemonsController.js"></script>
+	<script src="modules/routes/route.js"></script>
+</head>
+<body>
+
+	<div class="wrapper" ng-app="pokemonsApp" ng-controller="allPokemons">
+
+
+		<div id="nav" class="navbar navbar-default">
+			<a href="#/route3">HOME</a><br/>
+			<a href="#/route1">Route 1</a><br/>
+			<a href="#/route2">Route 2</a><br/>
+		</div>
+
+		<div id="body">
+			<div class="media">
+				<div class="media-body">
+
+						<ul>
+							<li ng-repeat="r in pokemons">
+								{{ r.name + " " + r.type}}
+							</li>
+						</ul>
+
+						<div ng-view></div>
+
+
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+</body>
+</html>
