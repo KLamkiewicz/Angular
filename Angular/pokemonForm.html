@@ -1,16 +1,14 @@
-<!-- <div ng-controller="addPokemon">
-
+<div>
+	<div ng-if="!isValidated" class="errorForm">
+		Form contains errors 
+	</div>
 	<form>
-		First Name:<br>
-		<input type="text" ng-model="user.firstName"><br>
-		Last Name:<br>
-		<input type="text" ng-model="user.lastName">
-		<br><br>
-		<button >Add </button> 
+		<input type="text" name="name" ng-model="pokemon.name" ng-init="pokemon.name='Lugia'"> First name <br/>
+		<input type="text" name="type"  ng-model="pokemon.type" ng-init="pokemon.type='Water'"> Last name <br/>
+		<button ng-click="pokemonForm.addPokemonForm()">Add pokemon</button>
 	</form>
 
-
-
-</div> --><!--ng-click="reset()">RESET</button>-->
-
-<p> xz </p>
+<!--     <div>
+        {{pokemon.name}} {{pokemon.type}}
+    </div> -->
+</div>
