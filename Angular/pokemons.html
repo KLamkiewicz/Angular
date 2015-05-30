@@ -1,7 +1,11 @@
 <div>
+
+	<input type="text" name="name" ng-model="filterType"/>
 	<ul>
-		<li ng-repeat="r in pokemons">
+		<li ng-repeat="r in pokemons | filter: { 'type': filterType }">
 			{{ r.name + " " + r.type}}
+
+			<img ng-src="{{r.img}}" class="pokemonPicture" />
 		</li>
 	</ul>
 
