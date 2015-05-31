@@ -2,10 +2,21 @@ var pokemonController = angular.module('pokemonsController',[]);
 
 
 pokemonController.controller('allPokemons', function($scope, PokemonService) {
+	$scope.pictureHov = "";
+	$scope.currentPosition = 100;
  	PokemonService.getPokemons(function(data){
  		$scope.filterType = "";
  		$scope.pokemons = data.pokemons;
  	});
+ 	
+
+ 	$scope.setPicture = function(val){
+ 		$scope.pictureHov = val;
+ 	}
+
+ 	$scope.getPosition = function(event){
+   		$scope.currentPosition= event.pageY-200;
+ 	}
 });
 
 pokemonController.controller('addPokemon', function($scope, $location, PokemonService) {

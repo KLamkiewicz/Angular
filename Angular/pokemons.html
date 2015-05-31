@@ -4,7 +4,7 @@
 			Filter Pokemons: <input type="text" name="name" ng-model="filterType"/><br/>
 		</div>
 
-		<table class="poke table table-hover" >
+		<table class="poke table table-hover" ng-mouseover="getPosition($event)" ng-mouseleave="getPosition($event)">
 			<thead>
 				<tr>
 					<th class="col-md-4">Name</th>
@@ -12,8 +12,8 @@
 					<th class="col-md-4">Picture</th>
 				</tr>
 			</thead>
-			<tbody ng-repeat="r in pokemons | filter: { 'type': filterType }">
-				<tr>
+			<tbody ng-repeat="r in pokemons | filter: { 'type': filterType }" >
+				<tr ng-mouseover="setPicture(r.img)" ng-mouseleave="setPicture('../pictures/pokeball.jpg')">
 					<td>{{r.name}}</td>
 					<td>{{r.type}}</td>
 					<td style="text-align:center;"><img ng-src="{{r.img}}" class="pokemonPicture"/></td>
@@ -24,7 +24,9 @@
 	</div>
 
 	<div id="picture">
+		<div show-pokemon>
 
+		</div>
 	</div>
 
 </div>

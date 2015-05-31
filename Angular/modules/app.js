@@ -1,1 +1,1 @@
-var app = angular.module('pokemonsApp', ['pokemonDBService','pokemonsController', 'pokemonsRoute']);
+var app = angular.module('pokemonsApp', ['pokemonDBService','pokemonsController', 'pokemonsRoute', 'pokemonsDirective']);
