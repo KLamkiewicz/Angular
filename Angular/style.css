@@ -35,3 +35,11 @@
 	margin-top: 5px;
 	margin-left: 10px;
 }
+
+#pokeDisplay{
+	float: left;
+}
+
+#picture{
+	float: right;
+}
