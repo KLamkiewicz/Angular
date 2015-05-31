@@ -2,3 +2,36 @@
 	width: 30px;
 	height: 30px;
 }
+
+#formWrapper{
+	padding-top: 150px;
+}
+
+#formDiv{
+	padding-left: 50px;
+	width: 25%;
+	margin: 0 auto;
+}
+
+#pokemonFormButton{
+	float: right;
+}
+
+.pokeInp{
+	float: right;
+}
+
+.poke{
+	margin-left: 100px;
+	margin-bottom: 20px;
+}
+
+#nav{
+	padding-left: 90px;
+}
+
+.btn{
+	float: left;
+	margin-top: 5px;
+	margin-left: 10px;
+}

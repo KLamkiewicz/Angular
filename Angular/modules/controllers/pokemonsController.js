@@ -3,7 +3,7 @@ var pokemonController = angular.module('pokemonsController',[]);
 
 pokemonController.controller('allPokemons', function($scope, PokemonService) {
  	PokemonService.getPokemons(function(data){
- 		$scope.filterType = "Bug";
+ 		$scope.filterType = "";
  		$scope.pokemons = data.pokemons;
  	});
 });

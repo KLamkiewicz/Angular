@@ -1,12 +1,15 @@
-<div>
-	<div ng-if="!isValidated" class="errorForm">
-		Form contains errors 
+<div id="formWrapper">
+
+	<div id="formDiv">	
+		<div ng-if="!isValidated" class="alert alert-danger">
+			Form contains errors 
+		</div>
+		<form>
+			<p> Name: <input class="pokeInp" type="text" name="name" ng-model="pokemon.name" ng-init="pokemon.name='Lugia'"></p><br/>
+			<p> Type: <input class="pokeInp" type="text" name="type"  ng-model="pokemon.type" ng-init="pokemon.type='Water'"></p><br/>
+			<button id="pokemonFormButton" ng-click="pokemonForm.addPokemonForm()">Add pokemon</button>
+		</form>
 	</div>
-	<form>
-		<input type="text" name="name" ng-model="pokemon.name" ng-init="pokemon.name='Lugia'"> First name <br/>
-		<input type="text" name="type"  ng-model="pokemon.type" ng-init="pokemon.type='Water'"> Last name <br/>
-		<button ng-click="pokemonForm.addPokemonForm()">Add pokemon</button>
-	</form>
 
 <!--     <div>
         {{pokemon.name}} {{pokemon.type}}
